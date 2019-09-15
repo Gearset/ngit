@@ -56,6 +56,7 @@ Task("Pack-NuGet")
     .IsDependentOn("Publish")
     .Does(() => {
         NuGetPack("./NGit.nuspec", new NuGetPackSettings {
+            BasePath = "./",
             OutputDirectory = artifactsDir,
             Properties = {
                 {"version", buildNumber},
