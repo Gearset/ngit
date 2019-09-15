@@ -56,6 +56,7 @@ Task("Pack-NuGet")
     .IsDependentOn("Publish")
     .Does(() => {
         NuGetPack("./NGit.nuspec", new NuGetPackSettings {
+            OutputDirectory = artifactsDir,
             Properties = {
                 {"version", buildNumber},
                 {"csharpcodeVersionFromPackagesConfig", "1.2.0"}
@@ -69,7 +70,7 @@ Task("Push-NuGet")
         if (!String.IsNullOrEmpty (feedzKey)) {
             Information("Have a feedz key so pushing package");
 
-            DotNetCoreNuGetPush($"./Gearset.NGit.{buildNumber}.nupkg", new DotNetCoreNuGetPushSettings {
+            DotNetCoreNuGetPush($"./{artifactsDir}/Gearset.NGit.{buildNumber}.nupkg", new DotNetCoreNuGetPushSettings {
                 Source = "https://f.feedz.io/gearsethq/gearset-ngit/nuget",
                 ApiKey = feedzKey
             });
