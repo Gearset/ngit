@@ -16,8 +16,8 @@
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="artifacts\NGit.*" target="lib\netstandard2.0" />
-		<file src="NGit.license.txt" target="App_Readme" />
-		<file src="artifacts\Sharpen.*" target="lib\netstandard2.0" />
+		<file src=".\artifacts\NGit.*" target="lib\netstandard2.0" />
+		<file src=".\NGit.license.txt" target="App_Readme" />
+		<file src=".\artifacts\Sharpen.*" target="lib\netstandard2.0" />
 	</files>
 </package>
