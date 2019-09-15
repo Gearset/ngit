@@ -22,3 +22,4 @@ paket.lock
 
 /tools/**
 /artifacts/**
+/Gearset.NGit.*.nupkg
