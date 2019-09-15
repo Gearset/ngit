@@ -21,3 +21,4 @@ paket.lock
 .idea
 
 /tools/**
+/artifacts/**
