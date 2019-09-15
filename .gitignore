@@ -19,3 +19,5 @@ packages/
 paket.lock
 .output/**/*.*
 .idea
+
+/tools/**
