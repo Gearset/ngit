@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- http://docs.nuget.org/docs/reference/nuspec-reference -->
+<package>
+	<metadata>
+		<id>Gearset.NGit</id>
+		<version>$version$</version>
+		<title>NGit</title>
+		<authors>Mono</authors>
+		<owners>Gearset</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A backport of NGit library which is itself an automated port from JGit</description>
+		<copyright>Copyright 2015</copyright>
+		<projectUrl>https://github.com/Gearset/ngit</projectUrl>
+		<dependencies>
+			<dependency id="SharpZipLib" version="$csharpcodeVersionFromPackagesConfig$" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="./artifacts/NGit.*" target="lib\netstandard2.0" />
+		<file src="./NGit.license.txt" target="App_Readme" />
+		<file src="./artifacts/Sharpen.*" target="lib\netstandard2.0" />
+	</files>
+</package>

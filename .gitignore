@@ -19,3 +19,7 @@ packages/
 paket.lock
 .output/**/*.*
 .idea
+
+/tools/**
+/artifacts/**
+/Gearset.NGit.*.nupkg
