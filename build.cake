@@ -56,8 +56,8 @@ Task("Pack-NuGet")
     .IsDependentOn("Publish")
     .Does(() => {
         NuGetPack("./NGit.nuspec", new NuGetPackSettings {
-            BasePath = "./",
             OutputDirectory = artifactsDir,
+            Verbosity = NuGetVerbosity.Detailed,
             Properties = {
                 {"version", buildNumber},
                 {"csharpcodeVersionFromPackagesConfig", "1.2.0"}
@@ -66,7 +66,7 @@ Task("Pack-NuGet")
     });
 
 Task("Push-NuGet")
-    .IsDependentOn("Pack-Nuget")
+    .IsDependentOn("Pack-NuGet")
     .Does(() => {
         if (!String.IsNullOrEmpty (feedzKey)) {
             Information("Have a feedz key so pushing package");
